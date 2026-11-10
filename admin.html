@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Budget Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <h1>Budget Planner - Admin</h1>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <main class="dashboard-container">
+        <h2>Admin Dashboard</h2>
+        <p>Manage and monitor registered users.</p>
+
+        <div class="dashboard-cards">
+            <div class="panel">
+                <h3>Total Users</h3>
+                <p id="userCount">0</p>
+            </div>
+
+            <div class="panel">
+                <h3>Total Income</h3>
+                <p id="adminIncome">₹0</p>
+            </div>
+
+            <div class="panel">
+                <h3>Total Expenses</h3>
+                <p id="adminExpenses">₹0</p>
+            </div>
+        </div>
+
+        <section class="panel">
+            <h2>Registered Users</h2>
+            <div id="userList">
+                No users registered yet.
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

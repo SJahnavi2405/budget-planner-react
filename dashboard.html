@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">Budget Planner</div>
+
+<nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="#" onclick="logout(); return false;">Logout</a>
+</nav>
+
+<button id="darkModeToggle" type="button">🌙 Dark Mode 
+</button>
+
+    </nav>
+
+</header>
+
+<main class="dashboard">
+
+    <h1>My Budget Dashboard</h1>
+
+    <div class="summary">
+
+        <div class="summary-card">
+            <h3>Total Income</h3>
+            <p id="totalIncome">₹0</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Total Expenses</h3>
+            <p id="totalExpense">₹0</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Balance</h3>
+            <p id="balance">₹0</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>Savings Goal</h3>
+            <p id="goal">₹0</p>
+        </div>
+
+    </div>
+
+    <div class="budget-grid">
+
+        <section class="panel">
+
+            <h2>Add Income</h2>
+
+            <input
+                type="number"
+                id="incomeInput"
+                placeholder="Enter income">
+
+            <button onclick="addIncome()">
+                Add Income
+            </button>
+
+        </section>
+
+        <section class="panel">
+
+            <h2>Add Expense</h2>
+
+            <input
+                type="text"
+                id="expenseName"
+                placeholder="Expense name">
+
+            <input
+                type="number"
+                id="expenseAmount"
+                placeholder="Amount">
+
+            <select id="expenseCategory">
+
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Shopping</option>
+                <option>Education</option>
+                <option>Entertainment</option>
+                <option>Other</option>
+
+            </select>
+
+            <button onclick="addExpense()">
+                Add Expense
+            </button>
+
+        </section>
+
+        <section class="panel">
+
+            <h2>Savings Goal</h2>
+
+            <input
+                type="number"
+                id="savingInput"
+                placeholder="Enter savings goal">
+
+            <button onclick="setSavingsGoal()">
+                Set Goal
+            </button>
+
+        </section>
+
+        <section class="panel">
+
+            <h2>Expense Summary</h2>
+
+            <div id="expenseList"></div>
+
+        </section>
+
+    </div>
+
+<!-- Expense Chart -->
+<section class="panel visualization-panel">
+    <h2>Expense Category Chart</h2>
+    <p class="section-description">
+        See how your expenses are divided by category.
+    </p>
+
+    <div id="expenseChart" class="expense-chart"></div>
+</section>
+
+<!-- Monthly Summary -->
+<section class="panel visualization-panel">
+    <h2>Monthly Summary</h2>
+
+    <label for="summaryMonth">Select Month:</label>
+    <input type="month" id="summaryMonth">
+
+    <div class="monthly-summary">
+        <div class="monthly-card">
+            <h3>Income This Month</h3>
+            <p id="monthlyIncome">₹0</p>
+        </div>
+
+        <div class="monthly-card">
+            <h3>Expenses This Month</h3>
+            <p id="monthlyExpenses">₹0</p>
+        </div>
+
+        <div class="monthly-card">
+            <h3>Monthly Balance</h3>
+            <p id="monthlyBalance">₹0</p>
+        </div>
+    </div>
+</section>
+</section>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
